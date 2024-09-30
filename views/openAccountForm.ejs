@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Account</title>
+</head>
+<body>
+    <form method="post">
+      Számlaszám:
+      <input type="text" name="id" value="<%= data.id %>" required><br>
+      Összeg:
+      <input type="number" name="balance" value="<%= data.balance %>" required><br>
+      Tulajdonos:
+      <input type="text" name="owner" value="<%= data.owner %>" required><br>
+
+      <%for (let e of errors) {%>
+        <p style="color: red;"><%= e %></p>
+      <% } %>
+
+      <input type="submit" value="Új számla">
+    </form>
+</body>
+</html>
